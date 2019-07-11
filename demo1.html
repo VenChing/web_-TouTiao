@@ -1,0 +1,86 @@
+<!-- 
+1.bootstrap+layui
+2.框架:栅格布局
+3.layui模块化使用
+4.今日头条 [1]
+-->
+<!DOCTYPE html>
+<html>
+<head>
+   <title>框架练习</title>
+   <link rel="icon" href="static/images/favicon.ico"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- 引入bootstrap的css文件 -->
+   <link rel="stylesheet" type="text/css" href="static/bootstrap/css/bootstrap.min.css">
+   <style type="text/css">
+      .box{
+        height: 40px;
+        background-color: #000;
+      }
+      .main{
+          border-radius: 10px;
+          width: 70%;
+          height: 400px;
+          background-color: #ccc;
+      }
+      .mt-20{margin-top: 20px;}
+     .col-md-7{background-color: #ff6500;height: 40px;}
+     .col-md-1{background-color: #eee;height: 40px;}
+     .col-md-3{background-color: #ff0;height: 400px;}
+     .col-md-6{background-color: blue;height: 400px;}
+     .col-md-4{background-color:#9BBC24;height: 400px;}
+     .col-md-8{background-color: #B2F2FA;height: 400px;}
+   </style>
+</head>
+<body>
+  <!-- 布局容器： -->
+ <!--  .container 固定宽度
+       .container-fluid 100% 宽度 
+       两者不能相互嵌套
+       栅格系统：
+        行：row（必须包含在container 和 container-fluid 中为了保证排列分布合适）
+        列：column（row的直接子元素，一行中最多12列，超出部分另起一行显示  col-md-）
+-->
+<!--  <div class="container-fluid box">
+   <div class="row">
+     <div class="col-md-7"></div>
+     <div class="col-md-4"></div>
+     <div class="col-md-1"></div>
+   </div>
+ </div> -->
+ <div class="container main mt-20"></div>
+ <div class="container main mt-20">
+   <div class="row">
+     <div class="col-md-3"></div>
+     <div class="col-md-6"></div>
+     <div class="col-md-3"></div>
+   </div>
+ </div>
+ <!-- 列偏移 .col-md-offset- -->
+ <div class="container-fluid box mt-20">
+   <div class="row">
+     <div class="col-md-7"></div>
+     <div class="col-md-1 col-md-offset-4"></div><!-- 向右边偏移4个列 -->
+   </div>
+ </div>
+<!-- 列嵌套 -->
+ <div class="container main mt-20">
+   <div class="row">
+     <div class="col-md-8">
+       <div class="row">
+         <div class="col-md-3"></div>        
+         <div class="col-md-3 col-md-offset-6"></div>
+       </div>
+     </div>
+     <div class="col-md-4"></div>
+   </div>
+ </div>
+<!-- .form-control 表单元素会被赋予一些全局样式 需要设置宽度
+     .form-inline  使表单元素排列在一行
+ -->
+<form class="form-inline">
+   <input type="text" name="" class="form-control"style="width: 400px;">
+   <input type="text" name="" class="form-control"style="width: 400px;">
+</form>
+</body>
+</html>

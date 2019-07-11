@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>layui模块练习</title>
+   <link rel="icon" href="static/images/favicon.ico">
+   <link rel="stylesheet" type="text/css" href="static/layui/css/layui.css">
+   <script type="text/javascript" src="static/layui/layui.js"></script>
+   <style type="text/css">
+   .box{margin: 50px auto;text-align: center;line-height: 580px;font-size: 58px;color: #fff;}   
+   </style>
+</head>
+<body>
+   <div class="layui-carousel box" id="test1">
+    <div carousel-item>
+      <div style="background:pink;">0 1</div>
+      <div style="background:#80d640;">0 2</div>
+      <div style="background:pink;">0 3</div>
+      <div style="background:#ff6500;">0 4</div>
+      <div style="background:#7EF0F7;">0 5</div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    layui.use('carousel',function(){
+       var carousel=layui.carousel;
+       carousel.render({
+          elem:'#test1'
+          ,width:'80%'
+          ,height:'580px'
+          // ,arrow:'none'
+          ,indicator:'none'
+       })
+    })
+  </script>
+</body>
+</html>
